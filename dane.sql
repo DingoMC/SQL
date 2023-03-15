@@ -115,3 +115,15 @@ INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracow
 (4, "2023-03-10 07:30:00", "2023-03-10 15:30:00", 2);
 INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracownik`) VALUES
 (5, "2023-03-12 08:00:00", "2023-03-12 16:00:00", 3);
+
+
+INSERT INTO `mydb`.`pojazd` (`idpojazd`, `max_ladunek`, `dostepnosc`, `stan_techniczny`, `idzamowienie`) VALUES
+(1, 3000, 1, 1, NULL);
+INSERT INTO `mydb`.`pojazd` (`idpojazd`, `max_ladunek`, `dostepnosc`, `stan_techniczny`, `idzamowienie`) VALUES
+(2, 1500, 1, 1, NULL);
+INSERT INTO `mydb`.`pojazd` (`idpojazd`, `max_ladunek`, `dostepnosc`, `stan_techniczny`, `idzamowienie`) VALUES
+(3, 2000, 1, 1, NULL);
+INSERT INTO `mydb`.`pojazd` (`idpojazd`, `max_ladunek`, `dostepnosc`, `stan_techniczny`, `idzamowienie`) VALUES
+(4, 33000, 1, 1, NULL);
+INSERT INTO `mydb`.`pojazd` (`idpojazd`, `max_ladunek`, `dostepnosc`, `stan_techniczny`, `idzamowienie`) VALUES
+(5, 15000, 1, 1, NULL);

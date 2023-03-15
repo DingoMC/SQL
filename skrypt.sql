@@ -75,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`zamowienie` (
   `adres_bazowy` VARCHAR(45) NOT NULL,
   `adres_docelowy` VARCHAR(45) NOT NULL,
   `masa` DECIMAL NOT NULL,
-  `data_zlozenia` DATE NOT NULL,
-  `data_realizacji` DATE NULL,
+  `data_zlozenia` DATETIME NOT NULL,
+  `data_realizacji` DATETIME NULL,
   `cena` DECIMAL NOT NULL,
   PRIMARY KEY (`idzamowienie`),
   INDEX `fk_zamowienie_stan_zamowienia1_idx` (`stan_zamowienia` ASC) VISIBLE,
@@ -182,8 +182,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`harmonogram` (
   `idharmonogram` INT NOT NULL,
-  `data_od` DATE NOT NULL,
-  `data_do` DATE NOT NULL,
+  `data_od` DATETIME NOT NULL,
+  `data_do` DATETIME NOT NULL,
   `pracownik` INT NOT NULL,
   PRIMARY KEY (`idharmonogram`),
   INDEX `fk_harmonogram_pracownik1_idx` (`pracownik` ASC) VISIBLE,

@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pracownik` (
   `idpracownik` INT NOT NULL,
   `stanowisko` INT NOT NULL,
   `iduzytkownik` INT NOT NULL,
-  `idzamowienie` INT NOT NULL,
+  `idzamowienie` INT,
   PRIMARY KEY (`idpracownik`),
   INDEX `fk_pracownik_stanowisko_idx` (`stanowisko` ASC) VISIBLE,
   INDEX `fk_pracownik_uzytkownik1_idx` (`iduzytkownik` ASC) VISIBLE,

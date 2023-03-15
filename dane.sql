@@ -93,3 +93,25 @@ INSERT INTO `mydb`.`zamowienie`
 `cena`)
 VALUES
 (5, 1, 5, "Warszawa 32A", "Kraków Koszykarska 4", 1500.00, "2023-03-12", 3500.0);
+
+INSERT INTO `mydb`.`faktura` (`idfaktura`, `idzamowienie`) VALUES (1, 1);
+INSERT INTO `mydb`.`faktura` (`idfaktura`, `idzamowienie`) VALUES (2, 3);
+INSERT INTO `mydb`.`faktura` (`idfaktura`, `idzamowienie`) VALUES (3, 5);
+
+INSERT INTO `mydb`.`pracownik` (`idpracownik`, `stanowisko`, `iduzytkownik`, `idzamowienie`) VALUES
+(1, 1, 1, NULL);
+INSERT INTO `mydb`.`pracownik` (`idpracownik`, `stanowisko`, `iduzytkownik`, `idzamowienie`) VALUES
+(2, 2, 2, NULL);
+INSERT INTO `mydb`.`pracownik` (`idpracownik`, `stanowisko`, `iduzytkownik`, `idzamowienie`) VALUES
+(3, 3, 6, 4);
+
+INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracownik`) VALUES
+(1, "2023-03-10 07:30:00", "2023-03-10 15:30:00", 1);
+INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracownik`) VALUES
+(2, "2023-03-09 07:30:00", "2023-03-09 15:30:00", 2);
+INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracownik`) VALUES
+(3, "2023-03-12 09:00:00", "2023-03-12 17:00:00", 1);
+INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracownik`) VALUES
+(4, "2023-03-10 07:30:00", "2023-03-10 15:30:00", 2);
+INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracownik`) VALUES
+(5, "2023-03-12 08:00:00", "2023-03-12 16:00:00", 3);

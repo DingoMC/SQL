@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pojazd` (
   `max_ladunek` DECIMAL NOT NULL,
   `dostepnosc` INT NOT NULL,
   `stan_techniczny` INT NOT NULL,
-  `idzamowienie` INT NOT NULL,
+  `idzamowienie` INT,
   PRIMARY KEY (`idpojazd`),
   INDEX `fk_pojazd_dostepnosc_pojazdu1_idx` (`dostepnosc` ASC) VISIBLE,
   INDEX `fk_pojazd_stan_techniczny1_idx` (`stan_techniczny` ASC) VISIBLE,

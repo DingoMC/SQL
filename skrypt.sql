@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`uzytkownik` (
   `iduzytkownik` INT NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `imie` VARCHAR(45) NOT NULL,
-  ` naziwsko` VARCHAR(45) NOT NULL,
+  `nazwisko` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`iduzytkownik`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
 ENGINE = InnoDB;

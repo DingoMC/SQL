@@ -103,7 +103,7 @@ INSERT INTO `mydb`.`pracownik` (`idpracownik`, `stanowisko`, `iduzytkownik`, `id
 INSERT INTO `mydb`.`pracownik` (`idpracownik`, `stanowisko`, `iduzytkownik`, `idzamowienie`) VALUES
 (2, 2, 2, NULL);
 INSERT INTO `mydb`.`pracownik` (`idpracownik`, `stanowisko`, `iduzytkownik`, `idzamowienie`) VALUES
-(3, 3, 6, 4);
+(3, 6, 3, 4);
 
 INSERT INTO `mydb`.`harmonogram` (`idharmonogram`, `data_od`, `data_do`, `pracownik`) VALUES
 (1, "2023-03-10 07:30:00", "2023-03-10 15:30:00", 1);

@@ -1,0 +1,5 @@
+Jako "użytkownik" chcę mieć możliwość bezproblemowego założenia i korzystania z karty wielowalutowej przy użyciu aplikacji, żeby móc dokonywać transakcji we wszystkich dostępnych walutach.
+Jako "administrator" chciałbym mieć możliwość zarządzania danymi osobowymi klienta takimi jak nazwa użytkownika, dane osobowe, hasło, historie transakcji oraz adres e-mail w przypadku np. utraty hasła lub w celu weryfikacji konta.
+Jako "redaktor" chcę mieć możliwość dodawania, usuwania oraz edytowania postów dotyczących aktualnych informacji giełdowych wyświetlanych na stronie głównej aplikacji.
+Jako "użytkownik" chciałbym mieć możliwość przelewania pieniędzy z konta bankowego na konto w aplikacji i odwrotnie.
+Jako "użytkownik" chcę mieć możliwość korzystania z rynku FOREX w celu dokonywania spekulacji na wybranych parach walutowych.

@@ -22,7 +22,7 @@ WHERE data_od > '2023-03-10';
 
 #6 Wyswietlenie danych pracownika tzn. jego id oraz stanowiska i przypisanego klienta, który złożył dane zamówienie wraz z datą złożenia.
 SELECT idpracownik, stanowisko, klient, data_zlozenia  
-FROM `mydb`.`pracownik` LEFT JOIN `mydb`.`zamowienie` 
+FROM `mydb`.`pracownik` INNER JOIN `mydb`.`zamowienie` 
 ON pracownik.idzamowienie = zamowienie.idzamowienie;
 
 #7 Wyświetlenie wszystkich danych pracowników, którzy mają przypisane jakieś zamówienie wraz ze stanowiskiem oraz id użytkownika w systemie.
@@ -33,7 +33,7 @@ WHERE idzamowienie IS NOT NULL;
 
 #8 Wyświetlenie stanu technicznego pojazdu, jego danych oraz statusu dostępności.
 SELECT stan_techniczny.nazwa, p.idpojazd, p.max_ladunek , p.dostepnosc FROM `mydb`. stan_techniczny
-LEFT JOIN `mydb`. pojazd p ON stan_techniczny.idstan_techniczny = p.stan_techniczny;
+RIGHT JOIN `mydb`. pojazd p ON stan_techniczny.idstan_techniczny = p.stan_techniczny;
 
 
 #9 Wyświetlenie id klienta, stanu zamówienia, adresu docelowego, ceny oraz id faktury złożonego zamówienia.
@@ -43,5 +43,5 @@ LEFT JOIN `mydb`. faktura f ON z.idzamowienie = f.idzamowienie
 ORDER BY stan_zamowienia;
 
 #10 Wyświetlenie id pojazdu, maksymalnego ładunku oraz jego statusu dostepności.
-SELECT p.max_ladunek, dostepnosc_pojazdu.nazwa FROM `mydb`. dostepnosc_pojazdu
-LEFT JOIN `mydb`. pojazd p on dostepnosc_pojazdu.iddostepnosc_pojazdu = p.dostepnosc;
+SELECT p.idpojazd, p.max_ladunek, dostepnosc_pojazdu.nazwa FROM `mydb`. dostepnosc_pojazdu
+RIGHT JOIN `mydb`. pojazd p on dostepnosc_pojazdu.iddostepnosc_pojazdu = p.dostepnosc;

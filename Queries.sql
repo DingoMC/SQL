@@ -7,7 +7,7 @@ SELECT AVG(cena), MIN(cena), MAX(cena) FROM `mydb`. zamowienie;
 #3 Wyświetlenie z tabeli użytkownik wszystkie osoby o imieniu Piotr
 SELECT * FROM `mydb`. uzytkownik WHERE imie="Piotr";
 
-#4 Wyswietlenia Imienia, nazwiska, nazwy stanowiska osób pracujacych przed 10 marca
+#4 Wyswietlenia Imienia, nazwiska, nazwy stanowiska oraz godzin pracy osób pracujacych przed 10 marca
 SELECT u.imie, u.nazwisko, s.nazwa, harmonogram.data_od, harmonogram.data_do FROM `mydb`.harmonogram 
 LEFT JOIN `mydb`.pracownik p ON harmonogram.pracownik = p.idpracownik
 LEFT JOIN `mydb`.uzytkownik u ON p.iduzytkownik = u.iduzytkownik

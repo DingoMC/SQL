@@ -15,7 +15,7 @@ LEFT JOIN `mydb`.stanowisko s ON p.stanowisko = s.idstanowisko
 WHERE data_do < "2023-03-10";
 
 #5 Wyswietlenia Imienia, nazwiska oraz id stanowiska osób pracujacych po 10 marca
-SELECT u.imie, u.nazwisko, p.stanowisko FROM `mydb`.harmonogram 
+SELECT DISTINCT u.imie, u.nazwisko, p.stanowisko FROM `mydb`.harmonogram 
 LEFT JOIN `mydb`.pracownik p ON harmonogram.pracownik = p.idpracownik
 LEFT JOIN  `mydb`.uzytkownik u ON p.iduzytkownik = u.iduzytkownik
 WHERE data_od > '2023-03-10';

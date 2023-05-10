@@ -371,3 +371,50 @@ db.klient_zamowienia.insertMany([
     "zamowienie_id": "z5"
   }
 ]);
+db.pojazd_stan.insertMany([
+  {
+    "_id": "poj_stt1",
+    "pojazd_id": "poj1",
+    "stan_techniczny_id": "stt1",
+    "data_od": "2022-06-01 00:00:00",
+    "data_do": null
+  },
+  {
+    "_id": "poj_stt2",
+    "pojazd_id": "poj2",
+    "stan_techniczny_id": "stt1",
+    "data_od": "2022-06-01 00:00:00",
+    "data_do": null
+  },
+  {
+    "_id": "poj_stt3",
+    "pojazd_id": "poj3",
+    "stan_techniczny_id": "stt1",
+    "data_od": "2022-06-01 00:00:00",
+    "data_do": null
+  },
+  {
+    "_id": "poj_stt4",
+    "pojazd_id": "poj4",
+    "stan_techniczny_id": "stt1",
+    "data_od": "2022-06-01 00:00:00",
+    "data_do": null
+  },
+  {
+    "_id": "poj_stt5",
+    "pojazd_id": "poj5",
+    "stan_techniczny_id": "stt1",
+    "data_od": "2022-06-01 00:00:00",
+    "data_do": null
+  }
+]);
+db.pojazd_zamowienia.insertMany([
+  {
+    "_id": "poj_z1",
+    "pojazd_id": "poj1",
+    "zamowienie_id": "z4",
+    "kierowca_id": "p3",
+    "data_od": "2023-03-12 09:00:00",
+    "data_do": "2023-03-12 12:00:00"
+  }
+]);

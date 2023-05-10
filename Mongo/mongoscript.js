@@ -1,5 +1,5 @@
 use mydb;
-db.createCollection("dostepnosc_pojazu");
+db.createCollection("dostepnosc_pojazdu");
 db.createCollection("stan_techniczny");
 db.createCollection("stan_zamowienia");
 db.createCollection("stanowisko");

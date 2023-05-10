@@ -13,6 +13,8 @@ db.createCollection("pojazd");
 db.createCollection("pracownik_zamowienia");
 db.createCollection("pracownik_stanowiska");
 db.createCollection("klient_zamowienie");
+db.createCollection("pojazd_stan");
+db.createCollection("pojazd_zamowienie");
 db.dostepnosc_pojazu.insertMany([
   {
     "_id": "dop1",
@@ -216,5 +218,92 @@ db.zamowienie.insertMany([
     "data_zlozenia": "2023-03-12 00:00:00",
     "data_realizacji": null,
     "cena": 3500
+  }
+]);
+db.pracownik.insertMany([
+  {
+    "_id": "p1",
+    "uzytkownik_id": "usr1",
+  },
+  {
+    "_id": "p2",
+    "uzytkownik_id": "usr2",
+  },
+  {
+    "_id": "p3",
+    "uzytkownik_id": "usr3",
+  }
+]);
+db.faktura.insertMany([
+  {
+    "_id": "f1",
+    "zamowienie_id": "z1"
+  },
+  {
+    "_id": "f2",
+    "zamowienie_id": "z3"
+  },
+  {
+    "_id": "f3",
+    "zamowienie_id": "z5"
+  }
+]);
+db.harmonogram.insertMany([
+  {
+    "_id": "h1",
+    "data_od": "2023-03-10 07:30:00",
+    "data_do": "2023-03-10 15:30:00",
+    "pracownik_id": "p1"
+  },
+  {
+    "_id": "h2",
+    "data_od": "2023-03-09 07:30:00",
+    "data_do": "2023-03-09 15:30:00",
+    "pracownik_id": "p2"
+  },
+  {
+    "_id": "h3",
+    "data_od": "2023-03-12 09:00:00",
+    "data_do": "2023-03-12 17:00:00",
+    "pracownik_id": "p3"
+  },
+  {
+    "_id": "h4",
+    "data_od": "2023-03-10 07:30:00",
+    "data_do": "2023-03-10 15:30:00",
+    "pracownik_id": "p4"
+  },
+  {
+    "_id": "h5",
+    "data_od": "2023-03-12 08:00:00",
+    "data_do": "2023-03-12 16:00:00",
+    "pracownik_id": "p5"
+  }
+]);
+db.pojazd.insertMany([
+  {
+    "_id": "poj1",
+    "max_ladunek": 3000,
+    "dostepnosc_id": "dop1"
+  },
+  {
+    "_id": "poj2",
+    "max_ladunek": 1500,
+    "dostepnosc_id": "dop1"
+  },
+  {
+    "_id": "poj3",
+    "max_ladunek": 2000,
+    "dostepnosc_id": "dop1"
+  },
+  {
+    "_id": "poj4",
+    "max_ladunek": 33000,
+    "dostepnosc_id": "dop1"
+  },
+  {
+    "_id": "poj5",
+    "max_ladunek": 15000,
+    "dostepnosc_id": "dop1"
   }
 ]);

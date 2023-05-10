@@ -8,8 +8,9 @@
       "_id": 2,
       "nazwa": "Niedostepny"
     }
-  ],
-  "faktura": [
+  ]
+},
+ "faktura": [
     {
       "_id": 1,
       "idzamowienie": 1

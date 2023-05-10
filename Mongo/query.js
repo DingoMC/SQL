@@ -36,3 +36,11 @@ db.pojazd.aggregate([
   {$lookup: {from: "dostepnosc_pojazdu", localField: "dostepnosc_id", foreignField: "_id", as: "dostepnosc"}},
   {$project: {"dostepnosc_id": 0, "stany_techniczne.pojazd_id": 0, "stany_techniczne._id": 0, "dostepnosc._id": 0}}
 ]);
+
+// 6. Wyświetlenie id klienta, stanu zamówienia, adresu docelowego, ceny oraz id faktury zamówienia z1
+db.zamowienie.aggregate([
+  {$match: {"_id": "z1"}},
+  {$lookup: {from: "stan_zamowienia", localField: "stan_zamowienia_id", foreignField: "_id", as: "stan"}},
+  {$lookup: {from: "faktura", localField: "_id", foreignField: "zamowienie_id", as: "faktura"}},
+  {$project: {"_id": 0, "stan_zamowienia_id": 0, "adres_bazowy": 0, "masa": 0, "data_zlozenia": 0, "data_realizacji": 0, "data_anulowania": 0, "faktura.zamowienie_id": 0}}
+]);

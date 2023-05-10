@@ -1,55 +1,55 @@
 {
   "dostepnosc_pojazdu": [
     {
-      "iddostepnosc_pojazdu": 1,
+      "_id": 1,
       "nazwa": "Dostepny"
     },
     {
-      "iddostepnosc_pojazdu": 2,
+      "_id": 2,
       "nazwa": "Niedostepny"
     }
   ],
   "faktura": [
     {
-      "idfaktura": 1,
+      "_id": 1,
       "idzamowienie": 1
     },
     {
-      "idfaktura": 2,
+      "_id": 2,
       "idzamowienie": 3
     },
     {
-      "idfaktura": 3,
+      "_id": 3,
       "idzamowienie": 5
     }
   ],
   "harmonogram": [
     {
-      "idharmonogram": 1,
+      "_id": 1,
       "data_od": "2023-03-10 07:30:00",
       "data_do": "2023-03-10 15:30:00",
       "pracownik": 1
     },
     {
-      "idharmonogram": 2,
+      "_id": 2,
       "data_od": "2023-03-09 07:30:00",
       "data_do": "2023-03-09 15:30:00",
       "pracownik": 2
     },
     {
-      "idharmonogram": 3,
+      "_id": 3,
       "data_od": "2023-03-12 09:00:00",
       "data_do": "2023-03-12 17:00:00",
       "pracownik": 1
     },
     {
-      "idharmonogram": 4,
+      "_id": 4,
       "data_od": "2023-03-10 07:30:00",
       "data_do": "2023-03-10 15:30:00",
       "pracownik": 2
     },
     {
-      "idharmonogram": 5,
+      "_id": 5,
       "data_od": "2023-03-12 08:00:00",
       "data_do": "2023-03-12 16:00:00",
       "pracownik": 3
@@ -57,57 +57,57 @@
   ],
   "klient": [
     {
-      "idklient": 1,
+      "_id": 1,
       "iduzytkownik": 4
     },
     {
-      "idklient": 2,
+      "_id": 2,
       "iduzytkownik": 5
     },
     {
-      "idklient": 3,
+      "_id": 3,
       "iduzytkownik": 6
     },
     {
-      "idklient": 4,
+      "_id": 4,
       "iduzytkownik": 7
     },
     {
-      "idklient": 5,
+      "_id": 5,
       "iduzytkownik": 8
     }
   ],
   "pojazd": [
     {
-      "idpojazd": 1,
+      "_id": 1,
       "max_ladunek": 3000,
       "dostepnosc": 1,
       "stan_techniczny": 1,
       "idzamowienie": null
     },
     {
-      "idpojazd": 2,
+      "_id": 2,
       "max_ladunek": 1500,
       "dostepnosc": 1,
       "stan_techniczny": 1,
       "idzamowienie": null
     },
     {
-      "idpojazd": 3,
+      "_id": 3,
       "max_ladunek": 2000,
       "dostepnosc": 1,
       "stan_techniczny": 1,
       "idzamowienie": null
     },
     {
-      "idpojazd": 4,
+      "_id": 4,
       "max_ladunek": 33000,
       "dostepnosc": 1,
       "stan_techniczny": 1,
       "idzamowienie": null
     },
     {
-      "idpojazd": 5,
+      "_id": 5,
       "max_ladunek": 15000,
       "dostepnosc": 1,
       "stan_techniczny": 1,
@@ -116,19 +116,19 @@
   ],
   "pracownik": [
     {
-      "idpracownik": 1,
+      "_id": 1,
       "stanowisko": 1,
       "iduzytkownik": 1,
       "idzamowienie": null
     },
     {
-      "idpracownik": 2,
+      "_id": 2,
       "stanowisko": 2,
       "iduzytkownik": 2,
       "idzamowienie": null
     },
     {
-      "idpracownik": 3,
+      "_id": 3,
       "stanowisko": 6,
       "iduzytkownik": 3,
       "idzamowienie": 4
@@ -136,115 +136,115 @@
   ],
   "stanowisko": [
     {
-      "idstanowisko": 5,
+      "_id": 5,
       "nazwa": "Kierowca"
     },
     {
-      "idstanowisko": 4,
+      "_id": 4,
       "nazwa": "Konserwator"
     },
     {
-      "idstanowisko": 2,
+      "_id": 2,
       "nazwa": "Koordynator zamowien"
     },
     {
-      "idstanowisko": 3,
+      "_id": 3,
       "nazwa": "Ksiegowy"
     },
     {
-      "idstanowisko": 6,
+      "_id": 6,
       "nazwa": "Pracownik"
     },
     {
-      "idstanowisko": 1,
+      "_id": 1,
       "nazwa": "Szef firmy"
     }
   ],
   "stan_techniczny": [
     {
-      "idstan_techniczny": 4,
+      "_id": 4,
       "nazwa": "Do przegladu"
     },
     {
-      "idstan_techniczny": 3,
+      "_id": 3,
       "nazwa": "Do ubezpieczenia"
     },
     {
-      "idstan_techniczny": 1,
+      "_id": 1,
       "nazwa": "Sprawny"
     },
     {
-      "idstan_techniczny": 2,
+      "_id": 2,
       "nazwa": "Uszkodzony"
     }
   ],
   "stan_zamowienia": [
     {
-      "idstan_zamowienia": 4,
+      "_id": 4,
       "nazwa": "Anulowane"
     },
     {
-      "idstan_zamowienia": 1,
+      "_id": 1,
       "nazwa": "Do realizacji"
     },
     {
-      "idstan_zamowienia": 5,
+      "_id": 5,
       "nazwa": "Oplacone"
     },
     {
-      "idstan_zamowienia": 2,
+      "_id": 2,
       "nazwa": "W trakcie realizacji"
     },
     {
-      "idstan_zamowienia": 3,
+      "_id": 3,
       "nazwa": "Zrealizowane"
     }
   ],
   "uzytkownik": [
     {
-      "iduzytkownik": 1,
+      "_id": 1,
       "email": "martin@gmail.com",
       "imie": "Marcin",
       "nazwisko": "Basak"
     },
     {
-      "iduzytkownik": 2,
+      "_id": 2,
       "email": "baran@gmail.com",
       "imie": "Jakub",
       "nazwisko": "Baran"
     },
     {
-      "iduzytkownik": 3,
+      "_id": 3,
       "email": "maister@gmail.com",
       "imie": "Mateusz",
       "nazwisko": "Adamczyk"
     },
     {
-      "iduzytkownik": 4,
+      "_id": 4,
       "email": "piter@gmail.com",
       "imie": "Piotr",
       "nazwisko": "Rumcajs"
     },
     {
-      "iduzytkownik": 5,
+      "_id": 5,
       "email": "tomek@gmail.com",
       "imie": "Tomek",
       "nazwisko": "Domek"
     },
     {
-      "iduzytkownik": 6,
+      "_id": 6,
       "email": "adrian@gmail.com",
       "imie": "Adrian",
       "nazwisko": "Pazur"
     },
     {
-      "iduzytkownik": 7,
+      "_id": 7,
       "email": "maciek@gmail.com",
       "imie": "Maciek",
       "nazwisko": "Bialy"
     },
     {
-      "iduzytkownik": 8,
+      "_id": 8,
       "email": "framuga@gmail.com",
       "imie": "Marcin",
       "nazwisko": "Framuga"
@@ -252,7 +252,7 @@
   ],
   "zamowienie": [
     {
-      "idzamowienie": 1,
+      "_id": 1,
       "stan_zamowienia": 1,
       "klient": 1,
       "adres_bazowy": "Bychawa 69A",
@@ -263,7 +263,7 @@
       "cena": 1568
     },
     {
-      "idzamowienie": 2,
+      "_id": 2,
       "stan_zamowienia": 5,
       "klient": 2,
       "adres_bazowy": "Zakrzowek 74B",
@@ -274,7 +274,7 @@
       "cena": 2000
     },
     {
-      "idzamowienie": 3,
+      "_id": 3,
       "stan_zamowienia": 4,
       "klient": 3,
       "adres_bazowy": "Lublin 24B",
@@ -285,7 +285,7 @@
       "cena": 476
     },
     {
-      "idzamowienie": 4,
+      "_id": 4,
       "stan_zamowienia": 1,
       "klient": 4,
       "adres_bazowy": "Lublin 123A",
@@ -296,7 +296,7 @@
       "cena": 2500
     },
     {
-      "idzamowienie": 5,
+      "_id": 5,
       "stan_zamowienia": 1,
       "klient": 5,
       "adres_bazowy": "Warszawa 32A",

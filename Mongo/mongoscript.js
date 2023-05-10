@@ -12,9 +12,9 @@ db.createCollection("harmonogram");
 db.createCollection("pojazd");
 db.createCollection("pracownik_zamowienia");
 db.createCollection("pracownik_stanowiska");
-db.createCollection("klient_zamowienie");
+db.createCollection("klient_zamowienia");
 db.createCollection("pojazd_stan");
-db.createCollection("pojazd_zamowienie");
+db.createCollection("pojazd_zamowienia");
 db.dostepnosc_pojazu.insertMany([
   {
     "_id": "dop1",
@@ -173,6 +173,7 @@ db.zamowienie.insertMany([
     "masa": 500,
     "data_zlozenia": "2023-03-08 00:00:00",
     "data_realizacji": null,
+    "data_anulowania": null,
     "cena": 1568
   },
   {
@@ -184,6 +185,7 @@ db.zamowienie.insertMany([
     "masa": 800,
     "data_zlozenia": "2023-03-11 00:00:00",
     "data_realizacji": null,
+    "data_anulowania": null,
     "cena": 2000
   },
   {
@@ -195,6 +197,7 @@ db.zamowienie.insertMany([
     "masa": 300,
     "data_zlozenia": "2023-03-01 00:00:00",
     "data_realizacji": null,
+    "data_anulowania": null,
     "cena": 476
   },
   {
@@ -206,6 +209,7 @@ db.zamowienie.insertMany([
     "masa": 1000,
     "data_zlozenia": "2023-03-12 00:00:00",
     "data_realizacji": null,
+    "data_anulowania": null,
     "cena": 2500
   },
   {
@@ -217,6 +221,7 @@ db.zamowienie.insertMany([
     "masa": 1500,
     "data_zlozenia": "2023-03-12 00:00:00",
     "data_realizacji": null,
+    "data_anulowania": null,
     "cena": 3500
   }
 ]);
@@ -305,5 +310,64 @@ db.pojazd.insertMany([
     "_id": "poj5",
     "max_ladunek": 15000,
     "dostepnosc_id": "dop1"
+  }
+]);
+db.pracownik_zamowienia.insertMany([
+  {
+    "_id": "pz1",
+    "pracownik_id": "p3",
+    "zamowienie_id": "z4",
+    "data_od": "2023-03-12 09:00:00",
+    "data_do": "2023-03-12 12:00:00"
+  }
+]);
+db.pracownik_stanowiska.insertMany([
+  {
+    "_id": "psta1",
+    "pracownik_id": "p1",
+    "stanowisko_id": "sta1",
+    "data_od": "2022-01-01 00:00:00",
+    "data_do": null
+  },
+  {
+    "_id": "psta2",
+    "pracownik_id": "p2",
+    "stanowisko_id": "sta2",
+    "data_od": "2022-06-01 12:00:00",
+    "data_do": null
+  },
+  {
+    "_id": "psta3",
+    "pracownik_id": "p3",
+    "stanowisko_id": "sta6",
+    "data_od": "2022-06-01 12:00:00",
+    "data_do": null
+  }
+]);
+db.klient_zamowienia.insertMany([
+  {
+    "_id": "kz1",
+    "klient_id": "k1",
+    "zamowienie_id": "z1"
+  },
+  {
+    "_id": "kz2",
+    "klient_id": "k2",
+    "zamowienie_id": "z2"
+  },
+  {
+    "_id": "kz3",
+    "klient_id": "k3",
+    "zamowienie_id": "z3"
+  },
+  {
+    "_id": "kz4",
+    "klient_id": "k4",
+    "zamowienie_id": "z4"
+  },
+  {
+    "_id": "kz5",
+    "klient_id": "k5",
+    "zamowienie_id": "z5"
   }
 ]);

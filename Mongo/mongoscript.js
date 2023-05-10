@@ -15,7 +15,7 @@ db.createCollection("pracownik_stanowiska");
 db.createCollection("klient_zamowienia");
 db.createCollection("pojazd_stan");
 db.createCollection("pojazd_zamowienia");
-db.dostepnosc_pojazu.insertMany([
+db.dostepnosc_pojazdu.insertMany([
   {
     "_id": "dop1",
     "nazwa": "Dostepny"

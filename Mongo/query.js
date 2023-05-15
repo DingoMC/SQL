@@ -44,3 +44,18 @@ db.zamowienie.aggregate([
   {$lookup: {from: "faktura", localField: "_id", foreignField: "zamowienie_id", as: "faktura"}},
   {$project: {"_id": 0, "stan_zamowienia_id": 0, "adres_bazowy": 0, "masa": 0, "data_zlozenia": 0, "data_realizacji": 0, "data_anulowania": 0, "faktura.zamowienie_id": 0}}
 ]);
+
+//7. Wyswietlenie wszystkich zamowien ze stanem "do realizacji"
+db.zamowienie.find({ stan_zamowienia_id: "stz1" })
+
+//8. Wyświetlenie pojazdu którego masa maksymalnego załadunku jest największa.
+db.pojazd.aggregate([
+  { $group: { _id: null, maxladunek: { $max: "$max_ladunek" } } }
+]);
+
+//9. Wyswietlenie wszystkich zamowien klienta o id "k4"
+db.klient.aggregate([
+  {$match: {"_id": "k4"}},
+  {$lookup: {from: "klient_zamowienia",localField: "_id",foreignField: "klient_id",as: "klient_zamowienia"}},
+  {$lookup: {from: "zamowienie",localField: "klient_zamowienia.zamowienie_id",foreignField: "_id",as: "zamowienie"}
+])

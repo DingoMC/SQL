@@ -59,3 +59,10 @@ db.klient.aggregate([
   {$lookup: {from: "klient_zamowienia",localField: "_id",foreignField: "klient_id",as: "klient_zamowienia"}},
   {$lookup: {from: "zamowienie",localField: "klient_zamowienia.zamowienie_id",foreignField: "_id",as: "zamowienie"}
 ])
+//10. Wyswietlenie wszystkich zamowien powiązanych z pojazdem o id "poj1"
+ db.pojazd.aggregate([
+  {$match: {"_id": "poj1"}},
+  {$lookup: {from: "pojazd_zamowienia",localField: "_id",foreignField: "pojazd_id",as: "pojazd_zamowienia"}},
+  {$lookup: {from: "zamowienie",localField: "pojazd_zamowienia.zamowienie_id",foreignField: "_id",as: "zamowienie"}}
+])
+  

@@ -71,3 +71,7 @@ db.klient.aggregate([
 
 //1.
 db.pojazd.update({_id: "poj2"}, {$set: {max_ladunek: "3350"}})
+
+//2. 
+db.pojazd.update({_id: "usr7"}, {$set: {"email": "malysz@gmail.com", "imie
+: "Adam", "nazwisko": "Malysz"}})

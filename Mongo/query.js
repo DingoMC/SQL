@@ -78,3 +78,7 @@ db.uzytkownik.update({_id: "usr7"}, {$set: {"email": "malysz@gmail.com", "imie
 //3.
 
 db.dostepnosc_pojazdu.update({nazwa:"Niedostepny"}, {$rename: {nazwa:"status}})
+                                                               
+//4. 
+db.zamowienie.update({stan_zamowienia_id: "stz1"}, {$set: {stan_zamowienia_id: "stz2"}}, {multi: true})                                                               
+                                                               

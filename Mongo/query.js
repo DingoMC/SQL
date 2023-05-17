@@ -75,10 +75,12 @@ db.pojazd.update({_id: "poj2"}, {$set: {max_ladunek: "3350"}})
 //2. 
 db.uzytkownik.update({_id: "usr7"}, {$set: {"email": "malysz@gmail.com", "imie
 : "Adam", "nazwisko": "Malysz"}})
-//3.
 
+//3.
 db.dostepnosc_pojazdu.update({nazwa:"Niedostepny"}, {$rename: {nazwa:"status}})
                                                                
 //4. 
 db.zamowienie.update({stan_zamowienia_id: "stz1"}, {$set: {stan_zamowienia_id: "stz2"}}, {multi: true})                                                               
                                                                
+//5. 
+db.stan_techniczny.deleteOne({nazwa: "Do ubezpieczenia"})

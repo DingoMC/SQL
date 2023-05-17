@@ -1,1 +1,2 @@
 mongodump -d mydb -o /home/student/Pulpit/backup
+mongorestore /home/student/Pulpit/dump/

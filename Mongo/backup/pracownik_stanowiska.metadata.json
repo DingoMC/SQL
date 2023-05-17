@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"b81ece7b5f364549bffd5999965684e4","collectionName":"pracownik_stanowiska","type":"collection"}

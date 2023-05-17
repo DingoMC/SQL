@@ -1,0 +1,1 @@
+mongoexport -d=mydb -c=klient

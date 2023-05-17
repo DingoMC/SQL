@@ -1,1 +1,1 @@
-mongoexport -d=mydb -c=klient
+mongoexport -d=mydb -c=klient --out dane.json

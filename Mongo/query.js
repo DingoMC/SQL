@@ -67,3 +67,7 @@ db.klient.aggregate([
   {$lookup: {from: "zamowienie",localField: "pojazd_zamowienia.zamowienie_id",foreignField: "_id",as: "zamowienie"}}
 ])
   
+//Updates
+
+//1.
+db.pojazd.update({_id: "poj2"}, {$set: {max_ladunek: "3350"}})

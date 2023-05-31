@@ -1,0 +1,63 @@
+// 1. Wyświetlenie wszystkich stanowisk sortując po nazwie
+MATCH (s:stanowisko)
+RETURN s
+ORDER BY s.nazwa ASC
+
+// 2. Wyświetlennie średniej ceny zamówień, najtańszego zamówienia oraz najdrozszego zamówienia
+MATCH (z:zamowienie)
+WITH AVG(z.cena) AS avgCena, MIN(z.cena) AS minCena, MAX(z.cena) AS maxCena
+RETURN avgCena, minCena, maxCena
+
+// 3. Wyświetlenie z tabeli użytkownik wszystkie osoby o imieniu Piotr
+MATCH (u:uzytkownik {imie:"Piotr"})
+RETURN u
+
+// 4. Wyswietlenie wszystkich danych pracownika o id p1
+MATCH (:pracownik {_id:'p1'})-[:PRACUJE]->(h:harmonogram)-[:MA_STANOWISKO]->(s:stanowisko)<-[:ZAJMUJE]-(ps:pracownik_stanowiska)-[:PRZYNALEZY_DO]->(:pracownik)<-[:JEST_WLASCICIELEM]-(u:uzytkownik)
+RETURN h,s,u;
+
+// 5. Wyświetlenie wszystkich danych pojazdu o id poj1
+MATCH (:pojazd {_id:'poj1'})-[:MA_STAN]->(ps:pojazd_stan)-[:JEST_STANEM_TECHNICZNYM_W]->(st:stan_techniczny)
+OPTIONAL MATCH (p:pojazd {_id:'poj1'})-[:MA_DOSTEPNOSC_POJAZDU]->(dp:dostepnosc_pojazdu)
+RETURN ps, st, dp
+
+// 6. Wyświetlenie id klienta, stanu zamówienia, adresu docelowego, ceny oraz id faktury zamówienia z1
+MATCH (z:zamowienie {_id:"z1"})-[:REALIZOWANE_PRZEZ]->(:klient) 
+WITH z.zamawiający_id AS klientID,z.stan_zamowienia_id AS stanID,z.adres_docelowy AS adresDocelowy,z.cena AS cena
+OPTIONAL MATCH (f:faktura {zamowienie_id:"z1"})
+RETURN klientID,cena,f._id as fakturaId,adresDocelowy,{stan_zamowienia_id:stanID} as stan;
+
+//7. Wyswietlenie wszystkich zamowien ze stanem "do realizacji"
+MATCH (o: zamowienie)-[r : MOŻE_BYĆ_ZREALIZOWANY_NA_ADRES]-(a : adres),  (o)-[r1 : MA_STAN_ZAMOWIENIA]-(s:stan_zamowienia)
+WHERE s._id = "stz1"
+RETURN o,r,a,s
+
+//8. Wyświetlenie pojazdu którego masa maksymalnego załadunku jest największa.
+MATCH (p:pojazd) 
+WITH MAX(p.max_ladunek) AS maxLadunek
+MATCH (p1:pojazd {max_ladunek:maxLadunek}) 
+RETURN p1;
+MATCH (:klient {_id:"k4"})-[:ZLOZYł]->(zamowienie)
+RETURN zamowienie
+  
+//10. Wyswietlenie wszystkich zamowien powiązanych z pojazdem o id "poj1"
+MATCH (: pojazd{_id:'poj1'})<-[:DOTYCZY_POJAZDU]-(pz : pojazd_zamowienia)-[:ODNOSI_SIĘ_DO_ZAMOWIENIA]->(zo : zamowienie)
+RETURN pz,zo
+  
+//Updates
+
+//1.
+db.pojazd.update({_id: "poj2"}, {$set: {max_ladunek: "3350"}})
+
+//2. 
+db.uzytkownik.update({_id: "usr7"}, {$set: {"email": "malysz@gmail.com", "imie
+: "Adam", "nazwisko": "Malysz"}})
+
+//3.
+db.dostepnosc_pojazdu.update({nazwa:"Niedostepny"}, {$rename: {nazwa:"status}})
+                                                               
+//4. 
+db.zamowienie.update({stan_zamowienia_id: "stz1"}, {$set: {stan_zamowienia_id: "stz2"}}, {multi: true})                                                               
+                                                               
+//5. 
+db.stan_techniczny.deleteOne({nazwa: "Do ubezpieczenia"})

@@ -105,7 +105,7 @@ CREATE (poj_stt1)-[:VEHICLE]->(poj1)
 CREATE (poj_stt2)-[:VEHICLE]->(poj2)
 CREATE (poj_stt3)-[:VEHICLE]->(poj3)
 CREATE (poj_stt4)-[:VEHICLE]->(poj4)
-CREATE (poj_stt5)-[:VEHICLE]->(poj5
+CREATE (poj_stt5)-[:VEHICLE]->(poj5)
 CREATE (poj_stt1)-[:STATE]->(stt1)
 CREATE (poj_stt2)-[:STATE]->(stt1)
 CREATE (poj_stt3)-[:STATE]->(stt1)

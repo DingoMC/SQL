@@ -1,19 +1,19 @@
 // 1. Wyświetlenie wszystkich stanowisk sortując po nazwie
-MATCH (s:stanowisko)
+MATCH (s:Stanowisko)
 RETURN s
 ORDER BY s.nazwa ASC
 
 // 2. Wyświetlennie średniej ceny zamówień, najtańszego zamówienia oraz najdrozszego zamówienia
-MATCH (z:zamowienie)
+MATCH (z:Zamowienie)
 WITH AVG(z.cena) AS avgCena, MIN(z.cena) AS minCena, MAX(z.cena) AS maxCena
 RETURN avgCena, minCena, maxCena
 
 // 3. Wyświetlenie z tabeli użytkownik wszystkie osoby o imieniu Piotr
-MATCH (u:uzytkownik {imie:"Piotr"})
+MATCH (u:Uzytkownik {imie:"Piotr"})
 RETURN u
 
 // 4. Wyswietlenie wszystkich danych pracownika o id p1
-MATCH (:pracownik {_id:'p1'})-[:PRACUJE]->(h:harmonogram)-[:MA_STANOWISKO]->(s:stanowisko)<-[:ZAJMUJE]-(ps:pracownik_stanowiska)-[:PRZYNALEZY_DO]->(:pracownik)<-[:JEST_WLASCICIELEM]-(u:uzytkownik)
+MATCH (p:Pracownik {id:1})<-[:IS_SET]-(h:Harmonogram)-[:MA_STANOWISKO]->(s:stanowisko)<-[:ZAJMUJE]-(ps:pracownik_stanowiska)-[:PRZYNALEZY_DO]->(:pracownik)<-[:JEST_WLASCICIELEM]-(u:uzytkownik)
 RETURN h,s,u;
 
 // 5. Wyświetlenie wszystkich danych pojazdu o id poj1

@@ -23,6 +23,7 @@ MATCH (p:Pracownik {id:1})-[r]-(b) return p, type(r), b
 MATCH (:pojazd {_id:'poj1'})-[:MA_STAN]->(ps:pojazd_stan)-[:JEST_STANEM_TECHNICZNYM_W]->(st:stan_techniczny)
 OPTIONAL MATCH (p:pojazd {_id:'poj1'})-[:MA_DOSTEPNOSC_POJAZDU]->(dp:dostepnosc_pojazdu)
 RETURN ps, st, dp
+MATCH (p:Pojazd {id:1})-[r]-(b) return p, type(r), b
 
 // 6. Wyświetlenie id klienta, stanu zamówienia, adresu docelowego, ceny oraz id faktury zamówienia z1
 MATCH (z:zamowienie {_id:"z1"})-[:REALIZOWANE_PRZEZ]->(:klient) 

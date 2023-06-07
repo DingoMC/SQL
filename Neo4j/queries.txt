@@ -13,7 +13,8 @@ MATCH (u:Uzytkownik {imie:"Piotr"})
 RETURN u
 
 // 4. Wyswietlenie wszystkich danych pracownika o id p1
-MATCH (p:Pracownik {id:1})<-[:IS_SET]-(h:Harmonogram)-[:MA_STANOWISKO]->(s:stanowisko)<-[:ZAJMUJE]-(ps:pracownik_stanowiska)-[:PRZYNALEZY_DO]->(:pracownik)<-[:JEST_WLASCICIELEM]-(u:uzytkownik)
+MATCH (p:Pracownik {id:1})<-[:IS_SET]-(h:Harmonogram), (p)-[:ON_POSITION]->(s:Stanowisko),
+(p)-[:IS_USER]->(u:Użytkownik)
 RETURN p,h,s,u;
 
 // 5. Wyświetlenie wszystkich danych pojazdu o id poj1

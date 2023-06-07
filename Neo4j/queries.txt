@@ -17,7 +17,7 @@ MATCH (p:Pracownik {id:1})<-[:IS_SET]-(h:Harmonogram), (p)-[:ON_POSITION]->(s:St
 (p)-[:IS_USER]->(u:Użytkownik)
 RETURN p,h,s,u;
 
-MATCH (p:Pracownik {id:1})-[r]-[b] return p, type(r), b
+MATCH (p:Pracownik {id:1})-[r]-(b) return p, type(r), b
 
 // 5. Wyświetlenie wszystkich danych pojazdu o id poj1
 MATCH (:pojazd {_id:'poj1'})-[:MA_STAN]->(ps:pojazd_stan)-[:JEST_STANEM_TECHNICZNYM_W]->(st:stan_techniczny)

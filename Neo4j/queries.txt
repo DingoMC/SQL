@@ -75,9 +75,11 @@ DETACH DELETE s;
 
 ///////
 
-MATCH (p:Pojazd {id:1})-[r:relacja]->() DELETE r
+MATCH (p:Pojazd {id:1})-[r:relacja]->() DELETE r # usuwanie relacji o nazwie relacja z danego node'a
 
-create user test set password "test"
-grant role publisher to test
+create user test set password "test" # dodanie użytkownika 
+grant role publisher to test # dodanie toli
 
-:server disconnect/connect
+:server disconnect/connect # rozłącz połącz 
+
+MATCH (n) RETURN n # zwraca wszystko

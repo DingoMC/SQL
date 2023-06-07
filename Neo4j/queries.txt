@@ -78,4 +78,4 @@ DETACH DELETE s;
 MATCH (p:Pojazd {id:1})-[r:relacja]->() DELETE r
 
 create user test set password "test"
-grant role publisher to user test
+grant role publisher to test

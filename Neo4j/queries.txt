@@ -72,4 +72,10 @@ RETURN zo;
 MATCH (s:stan_techniczny {nazwa:"Do ubezpieczenia"})
 DETACH DELETE s;
 
+
+///////
+
 MATCH (p:Pojazd {id:1})-[r:relacja]->() DELETE r
+
+create user test set password "test"
+grant role publisher to user test

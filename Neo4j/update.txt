@@ -5,7 +5,9 @@ MATCH (p:Pojazd {id: 2}) SET p.max_ladunek = "3350"
 MATCH (u:Uzytkownik {id: 2}) SET u.email = "malysz@gmail.com", u.imie = "Adam", u.nazwisko = "Malysz"
 
 //3
-
+MATCH (u:Uzytkownik {id: 8})
+SET u.adres = "ul. Nowa 1"
+RETURN u
 
 //4
 MATCH (z:Zamowienie {id: 4}) 

@@ -1,0 +1,343 @@
+[
+  {
+    "n": {
+      "identity": 0,
+      "labels": [
+        "DostepnoscPojazdu"
+      ],
+      "properties": {
+        "id": 1,
+        "nazwa": "Dostepny"
+      },
+      "elementId": "0"
+    }
+  },
+  {
+    "n": {
+      "identity": 1,
+      "labels": [
+        "DostepnoscPojazdu"
+      ],
+      "properties": {
+        "id": 2,
+        "nazwa": "Niedostepny"
+      },
+      "elementId": "1"
+    }
+  },
+  {
+    "n": {
+      "identity": 2,
+      "labels": [
+        "StanTechniczny"
+      ],
+      "properties": {
+        "id": 1,
+        "nazwa": "Sprawny"
+      },
+      "elementId": "2"
+    }
+  },
+  {
+    "n": {
+      "identity": 3,
+      "labels": [
+        "StanTechniczny"
+      ],
+      "properties": {
+        "id": 2,
+        "nazwa": "Uszkodzony"
+      },
+      "elementId": "3"
+    }
+  },
+  {
+    "n": {
+      "identity": 4,
+      "labels": [
+        "StanTechniczny"
+      ],
+      "properties": {
+        "id": 3,
+        "nazwa": "Do ubezpieczenia"
+      },
+      "elementId": "4"
+    }
+  },
+  {
+    "n": {
+      "identity": 5,
+      "labels": [
+        "StanTechniczny"
+      ],
+      "properties": {
+        "id": 4,
+        "nazwa": "Do przegladu"
+      },
+      "elementId": "5"
+    }
+  },
+  {
+    "n": {
+      "identity": 6,
+      "labels": [
+        "StanZamowienia"
+      ],
+      "properties": {
+        "id": 1,
+        "nazwa": "Do realizacji"
+      },
+      "elementId": "6"
+    }
+  },
+  {
+    "n": {
+      "identity": 7,
+      "labels": [
+        "StanZamowienia"
+      ],
+      "properties": {
+        "id": 2,
+        "nazwa": "W trakcie realizacji"
+      },
+      "elementId": "7"
+    }
+  },
+  {
+    "n": {
+      "identity": 8,
+      "labels": [
+        "StanZamowienia"
+      ],
+      "properties": {
+        "id": 3,
+        "nazwa": "Zrealizowane"
+      },
+      "elementId": "8"
+    }
+  },
+  {
+    "n": {
+      "identity": 9,
+      "labels": [
+        "StanZamowienia"
+      ],
+      "properties": {
+        "id": 4,
+        "nazwa": "Anulowane"
+      },
+      "elementId": "9"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "StanZamowienia"
+      ],
+      "properties": {
+        "id": 5,
+        "nazwa": "Oplacone"
+      },
+      "elementId": "10"
+    }
+  },
+  {
+    "n": {
+      "identity": 11,
+      "labels": [
+        "Stanowisko"
+      ],
+      "properties": {
+        "id": 1,
+        "nazwa": "Szef firmy"
+      },
+      "elementId": "11"
+    }
+  },
+  {
+    "n": {
+      "identity": 12,
+      "labels": [
+        "Stanowisko"
+      ],
+      "properties": {
+        "id": 2,
+        "nazwa": "Koordynator zamowien"
+      },
+      "elementId": "12"
+    }
+  },
+  {
+    "n": {
+      "identity": 13,
+      "labels": [
+        "Stanowisko"
+      ],
+      "properties": {
+        "id": 3,
+        "nazwa": "Ksiegowy"
+      },
+      "elementId": "13"
+    }
+  },
+  {
+    "n": {
+      "identity": 14,
+      "labels": [
+        "Stanowisko"
+      ],
+      "properties": {
+        "id": 4,
+        "nazwa": "Konserwator"
+      },
+      "elementId": "14"
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "Stanowisko"
+      ],
+      "properties": {
+        "id": 5,
+        "nazwa": "Kierowca"
+      },
+      "elementId": "15"
+    }
+  },
+  {
+    "n": {
+      "identity": 16,
+      "labels": [
+        "Stanowisko"
+      ],
+      "properties": {
+        "id": 6,
+        "nazwa": "Pracownik"
+      },
+      "elementId": "16"
+    }
+  },
+  {
+    "n": {
+      "identity": 17,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Marcin",
+        "nazwisko": "Basak",
+        "id": 1,
+        "email": "martin@gmail.com"
+      },
+      "elementId": "17"
+    }
+  },
+  {
+    "n": {
+      "identity": 18,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Jakub",
+        "nazwisko": "Baran",
+        "id": 2,
+        "email": "baran@gmail.com"
+      },
+      "elementId": "18"
+    }
+  },
+  {
+    "n": {
+      "identity": 19,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Mateusz",
+        "nazwisko": "Adamczyk",
+        "id": 3,
+        "email": "maister@gmail.com"
+      },
+      "elementId": "19"
+    }
+  },
+  {
+    "n": {
+      "identity": 20,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Piotr",
+        "nazwisko": "Rumcajs",
+        "id": 4,
+        "email": "piter@gmail.com"
+      },
+      "elementId": "20"
+    }
+  },
+  {
+    "n": {
+      "identity": 21,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Tomek",
+        "nazwisko": "Domek",
+        "id": 5,
+        "email": "tomek@gmail.com"
+      },
+      "elementId": "21"
+    }
+  },
+  {
+    "n": {
+      "identity": 22,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Adrian",
+        "nazwisko": "Pazur",
+        "id": 6,
+        "email": "adrian@gmail.com"
+      },
+      "elementId": "22"
+    }
+  },
+  {
+    "n": {
+      "identity": 23,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Maciej",
+        "nazwisko": "Biały",
+        "id": 7,
+        "email": "maciek@gmail.com"
+      },
+      "elementId": "23"
+    }
+  },
+  {
+    "n": {
+      "identity": 24,
+      "labels": [
+        "Uzytkownik"
+      ],
+      "properties": {
+        "imie": "Marcin",
+        "nazwisko": "Framuga",
+        "id": 8,
+        "email": "framuga@gmail.com"
+      },
+      "elementId": "24"
+    }
+  }
+]

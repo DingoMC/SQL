@@ -1,0 +1,15 @@
+//1
+MATCH (p:Pojazd {id: 2}) SET p.max_ladunek = "3350"
+
+//2
+MATCH (u:Uzytkownik {id: 2}) SET u.email = "malysz@gmail.com", u.imie = "Adam", u.nazwisko = "Malysz"
+
+//3
+
+
+//4
+MATCH (z:Zamowienie {id: 4}) 
+SET z.adres_bazowy = "Poznan 75", z.cena = "4000"
+
+//5
+MATCH (st:StanTechniczny {nazwa:"Do ubezpieczenia"}) DETACH DELETE st

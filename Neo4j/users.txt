@@ -1,0 +1,11 @@
+// użytkownik z prawami tylko do odczytu
+CREATE USER read_only_user SET PASSWORD 'password' CHANGE NOT REQUIRED;
+GRANT ROLE reader TO read_only_user;
+
+// użytkownik z prawami do odczytu i zapisu
+CREATE USER read_write_user SET PASSWORD 'password' CHANGE NOT REQUIRED;
+GRANT ROLE publisher TO read_write_user;
+
+// użytkownik z prawami admina
+CREATE USER admin_user SET PASSWORD 'password' CHANGE NOT REQUIRED;
+GRANT ROLE admin TO admin_user;

@@ -22,11 +22,11 @@ MATCH (p:Pracownik {id:1})-[r]-(b) return p, type(r), b
 // 5. Wyświetlenie wszystkich danych pojazdu o id poj1
 MATCH (p:Pojazd {id:1})-[r]-(b) return p, type(r), b
 
-// 6. Wyświetlenie id klienta, stanu zamówienia, adresu docelowego, ceny oraz id faktury zamówienia z1
-MATCH (z:zamowienie {_id:"z1"})-[:REALIZOWANE_PRZEZ]->(:klient) 
-WITH z.zamawiający_id AS klientID,z.stan_zamowienia_id AS stanID,z.adres_docelowy AS adresDocelowy,z.cena AS cena
-OPTIONAL MATCH (f:faktura {zamowienie_id:"z1"})
-RETURN klientID,cena,f._id as fakturaId,adresDocelowy,{stan_zamowienia_id:stanID} as stan;
+// 6. Wyświetlenie wszystkich aut o statusie Sprawny
+MATCH (p:Pojazd), (s:StanTechniczny)
+WHERE s.nazwa = "Sprawny"
+CREATE (p)-[r:Sprawne_Auta2]->(s)
+RETURN p,r,s
 
 //7. Wyswietlenie wszystkich zamowien ze stanem "do realizacji"
 MATCH (o: zamowienie)-[r : MOŻE_BYĆ_ZREALIZOWANY_NA_ADRES]-(a : adres),  (o)-[r1 : MA_STAN_ZAMOWIENIA]-(s:stan_zamowienia)

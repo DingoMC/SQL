@@ -29,19 +29,21 @@ CREATE (p)-[r:Sprawne_Auta2]->(s)
 RETURN p,r,s
 
 //7. Wyswietlenie wszystkich zamowien ze stanem "do realizacji"
-MATCH (o: zamowienie)-[r : MOŻE_BYĆ_ZREALIZOWANY_NA_ADRES]-(a : adres),  (o)-[r1 : MA_STAN_ZAMOWIENIA]-(s:stan_zamowienia)
-WHERE s._id = "stz1"
-RETURN o,r,a,s
+MATCH (z:Zamowienie), (s:StanZamowienia)
+WHERE s.nazwa = "Do realizacji"
+CREATE (z)-[r:Zlecenia_Do_realizacji2]->(s)
+RETURN z,r,s
 
 //8. Wyświetlenie pojazdu którego masa maksymalnego załadunku jest największa.
-MATCH (p:pojazd) 
+MATCH (p:Pojazd)
 WITH MAX(p.max_ladunek) AS maxLadunek
-MATCH (p1:pojazd {max_ladunek:maxLadunek}) 
-RETURN p1;
-MATCH (:klient {_id:"k4"})-[:ZLOZYł]->(zamowienie)
-RETURN zamowienie
-  
-//10. Wyswietlenie wszystkich zamowien powiązanych z pojazdem o id "poj1"
+MATCH (p:Pojazd {max_ladunek: maxLadunek})
+RETURN p, maxLadunek
+
+//9. Wyswietlenie wszystkich zamowien klienta o id "k4"
+MATCH (p:Klient {id:4})-[r:BELONGS_TO]-(b) return p, type(r), b
+
+//10. Wyswietlenie wszystkich zamowien powiązanych z pojazdem o id "1"
 MATCH (: pojazd{_id:'poj1'})<-[:DOTYCZY_POJAZDU]-(pz : pojazd_zamowienia)-[:ODNOSI_SIĘ_DO_ZAMOWIENIA]->(zo : zamowienie)
 RETURN pz,zo
   

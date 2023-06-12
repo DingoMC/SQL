@@ -44,8 +44,7 @@ RETURN p, maxLadunek
 MATCH (p:Klient {id:4})-[r:BELONGS_TO]-(b) return p, type(r), b
 
 //10. Wyswietlenie wszystkich zamowien powiązanych z pojazdem o id "1"
-MATCH (: pojazd{_id:'poj1'})<-[:DOTYCZY_POJAZDU]-(pz : pojazd_zamowienia)-[:ODNOSI_SIĘ_DO_ZAMOWIENIA]->(zo : zamowienie)
-RETURN pz,zo
+MATCH (p:PojazdZamowienia {id:1})-[r:ORDER]-(b) return p, r, b
   
 //Updates
 

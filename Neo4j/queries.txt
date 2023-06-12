@@ -46,32 +46,6 @@ MATCH (p:Klient {id:4})-[r:BELONGS_TO]-(b) return p, type(r), b
 //10. Wyswietlenie wszystkich zamowien powiązanych z pojazdem o id "1"
 MATCH (p:PojazdZamowienia {id:1})-[r:ORDER]-(b) return p, r, b
   
-//Updates
-
-//1.
-MATCH (p: pojazd{_id:"poj2"})
-SET p.max_ladunek = 3350
-RETURN p;
-
-//2. 
-MATCH (u: uzytkownik {_id:"usr7"})
-SET u.email="malysz@gmail.com", u.imie="Adam", u.nazwisko="Malysz"
-RETURN u;
-
-//3.
-MATCH (dp:dostepnosc_pojazdu {nazwa:'Niedostepny'})
-SET dp.status=dp.nazwa
-REMOVE dp.nazwa 
-RETURN dp
-                                                               
-//4. 
-MATCH (: stan_zamowienia{_id : 'stz1'})<-[:MA_STAN_ZAMOWIENIA]-(zo : zamowienie)
-SET zo.stan_zamowienia_id ='stz2'
-RETURN zo;                                                       
-                                                               
-//5.
-MATCH (s:stan_techniczny {nazwa:"Do ubezpieczenia"})
-DETACH DELETE s;
 
 
 ///////

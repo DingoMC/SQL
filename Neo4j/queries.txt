@@ -58,3 +58,14 @@ grant role publisher to test # dodanie toli
 :server disconnect/connect # rozłącz połącz 
 
 MATCH (n) RETURN n # zwraca wszystko
+
+
+//trzeba pobrać plugin APOC dla bazy
+//zwraca typy wszystkich właściwości dla danego node'a
+match (n:Pojazd {id:1})
+with keys(properties(n)) as keys, properties(n) as pMap
+unwind keys as key
+return key, apoc.meta.cypher.type(pMap[key])
+
+//usunięcie wszystkich relacji i indexów
+CALL apoc.schema.assert({},{})

@@ -114,3 +114,40 @@ CREATE (poj_stt5)-[:STATE]->(stt1)
 CREATE (poj_z1)-[:VEHICLE]->(poj1)
 CREATE (poj_z1)-[:ORDER]->(z4)
 CREATE (poj_z1)-[:DRIVER]->(p3)
+
+
+
+//UNIQUE i NOT NULL dla email i id Uzytkownika
+CREATE CONSTRAINT UzytkownikNK FOR (u:Uzytkownik) REQUIRE (u.id, u.email) IS NODE KEY
+
+CREATE CONSTRAINT KlientNK FOR (k:Klient) REQUIRE k.id IS NODE KEY
+CREATE CONSTRAINT PracownikNK FOR (p:Pracownik) REQUIRE p.id IS NODE KEY
+CREATE CONSTRAINT PracownikStanowiskaNK FOR (ps:PracownikStanowiska) REQUIRE ps.id IS NODE KEY
+CREATE CONSTRAINT StanZamowieniaNK FOR (stz:StanZamowienia) REQUIRE (stz.id, stz.nazwa) IS NODE KEY
+CREATE CONSTRAINT ZamowienieNK FOR (z:Zamowienie) REQUIRE z.id IS NODE KEY
+CREATE CONSTRAINT Harmonogram FOR (h:Harmonogram) REQUIRE h.id IS NODE KEY
+CREATE CONSTRAINT PojazdNK FOR (poj:Pojazd) REQUIRE poj.id IS NODE KEY
+CREATE CONSTRAINT PojazdZamowieniaNK FOR (pz:PojazdZamowienia) REQUIRE pz.id IS NODE KEY
+CREATE CONSTRAINT PojazdStanNK FOR (psta:PojazdStan) REQUIRE psta.id IS NODE KEY
+CREATE CONSTRAINT StanowiskoNK FOR (s:Stanowisko) REQUIRE s.id IS NODE KEY
+CREATE CONSTRAINT DostepnoscPojazdu FOR (dop:DostepnoscPojazdu) REQUIRE dop.id IS NODE KEY
+CREATE CONSTRAINT FakturaNK FOR (f:Faktura) REQUIRE f.id IS NODE KEY
+CREATE CONSTRAINT StanTechnicznyNK FOR (stt:StanTechniczny) REQUIRE stt.id IS NODE KEY
+
+
+
+//NOT NULL dla imie Uzytkownik
+CREATE CONSTRAINT Uzytkownik_ImieNN FOR (u:Uzytkownik) REQUIRE u.imie IS NOT NULL
+
+CREATE CONSTRAINT Uzytkownik_NazwiskoNN FOR (u:Uzytkownik) REQUIRE u.nazwisko IS NOT NULL
+CREATE CONSTRAINT PracownikStanowiskaNN FOR (ps:PracownikStanowiska) REQUIRE ps.data_od IS NOT NULL
+CREATE CONSTRAINT Zamowienie_DataZloNN FOR (z:Zamowienie) REQUIRE z.data_zlozenia IS NOT NULL
+CREATE CONSTRAINT Zamowienie_AdresBazNN FOR (z:Zamowienie) REQUIRE z.adres_bazowy IS NOT NULL
+CREATE CONSTRAINT Zamowienie_AdresDocNN FOR (z:Zamowienie) REQUIRE z.adres_docelowy IS NOT NULL
+CREATE CONSTRAINT Zamowienie_MasaNN FOR (z:Zamowienie) REQUIRE z.masa IS NOT NULL
+CREATE CONSTRAINT Zamowienie_CenaNN FOR (z:Zamowienie) REQUIRE z.cena IS NOT NULL
+CREATE CONSTRAINT Harmonogram_DataDoNN FOR (h:Harmonogram) REQUIRE h.data_do IS NOT NULL
+CREATE CONSTRAINT Harmonogram_DataOdNN FOR (h:Harmonogram) REQUIRE h.data_od IS NOT NULL
+CREATE CONSTRAINT PojazdNN FOR (poj:Pojazd) REQUIRE poj.max_ladunek IS NOT NULL
+CREATE CONSTRAINT PojazdStanNN FOR (psta:PojazdStan) REQUIRE psta.data_od IS NOT NULL
+CREATE CONSTRAINT DostepnoscPojazduNN FOR (dop:DostepnoscPojazdu) REQUIRE dop.nazwa IS NOT NULL
